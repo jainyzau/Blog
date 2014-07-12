@@ -1,13 +1,11 @@
 <%= form_for([@post, @post.comments.build]) do |f|%>
   <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, placeholder:"昵称*" %>
   </p>
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body, class:"form-control", rows:"3" %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-primary btn-lg", role:"button",  value:"提交评论"%>
   </p>
 <% end %>
